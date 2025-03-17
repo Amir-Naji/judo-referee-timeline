@@ -4,27 +4,37 @@ import Button from './Button';
 
 function MainComponent() {
 const [page, setPage] = useState([""]);
-const [time, setTime] = useState();
+const [startTime, setStartTime] = useState(null);
+const [timeDiff, setTimeDiff] = useState(null);
 
 function handleClick(side, action) {
+    console.log(startTime);
     if (action === "attack"){
-        setPage([...page, <Info color={side} text={side + " attack at: "} />]);
+        setPage([...page, <Info color={side} text={side + " attack at: "} startTime={startTime}/>]);
     }
     if (action === "shido"){
-        setPage([...page, <Info color={side} text={side + " shido at: "} />]);
+        setPage([...page, <Info color={side} text={side + " shido at: "} startTime={startTime} />]);
     }
     if (action === "throw"){
-        setPage([...page, <Info color={side} text={side + " throw at: "} />]);
+        setPage([...page, <Info color={side} text={side + " throw at: "} startTime={startTime} />]);
     }
   }
 
   function startClick(){
+    console.log("here");
+    setStartTime(Date.now());
+    setTimeDiff(null);
+  }
 
+  function endClick(){
+    setStartTime(null);
+    setTimeDiff(null);
   }
 
   return (
     <React.Fragment>
         <Button text="Hajime" onClick={() => startClick()}/>
+        <Button text="Soremade" onClick={() => endClick()}/>
         <div className='rowC'>
             <div className='margin'>
                 <Button color="white" text="attack" onClick={()=> handleClick("white", "attack")}/>

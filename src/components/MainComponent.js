@@ -8,16 +8,7 @@ const [startTime, setStartTime] = useState(null);
 const [timeDiff, setTimeDiff] = useState(null);
 
 function handleClick(side, action) {
-    console.log(startTime);
-    if (action === "attack"){
-        setPage([...page, <Info color={side} text={side + " attack at: "} startTime={startTime}/>]);
-    }
-    if (action === "shido"){
-        setPage([...page, <Info color={side} text={side + " shido at: "} startTime={startTime} />]);
-    }
-    if (action === "throw"){
-        setPage([...page, <Info color={side} text={side + " throw at: "} startTime={startTime} />]);
-    }
+    setPage([...page, <Info side={side} action={action} startTime={startTime}/>]);
   }
 
   function startClick(){

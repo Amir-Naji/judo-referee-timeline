@@ -5,7 +5,6 @@ import Button from './Button';
 function MainComponent() {
 const [page, setPage] = useState([""]);
 const [startTime, setStartTime] = useState(null);
-const [timeDiff, setTimeDiff] = useState(null);
 
 function handleClick(side, action) {
     setPage([...page, <Info side={side} action={action} startTime={startTime}/>]);

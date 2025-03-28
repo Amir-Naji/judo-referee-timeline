@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/judo-referee-timeline/static/css/main.1167e637.css",
-    "main.js": "/judo-referee-timeline/static/js/main.834ee939.js",
+    "main.js": "/judo-referee-timeline/static/js/main.1aee9ae8.js",
     "index.html": "/judo-referee-timeline/index.html",
     "main.1167e637.css.map": "/judo-referee-timeline/static/css/main.1167e637.css.map",
-    "main.834ee939.js.map": "/judo-referee-timeline/static/js/main.834ee939.js.map"
+    "main.1aee9ae8.js.map": "/judo-referee-timeline/static/js/main.1aee9ae8.js.map"
   },
   "entrypoints": [
     "static/css/main.1167e637.css",
-    "static/js/main.834ee939.js"
+    "static/js/main.1aee9ae8.js"
   ]
 }

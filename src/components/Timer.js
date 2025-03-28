@@ -22,16 +22,12 @@ function StopWatch({ isRunning }) {
   // Seconds calculation
   const seconds = Math.floor((time % 6000) / 100);
 
-  // Milliseconds calculation
-  const milliseconds = time % 100;
-
   return (
     <div className="stopwatch-container">
       <p className="stopwatch-time">
         Time: {" "}
         {minutes.toString().padStart(2, "0")}:
-        {seconds.toString().padStart(2, "0")}:
-        {milliseconds.toString().padStart(2, "0")}
+        {seconds.toString().padStart(2, "0")}
       </p>
     </div>
   );

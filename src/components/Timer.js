@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 function StopWatch({ isRunning }) {
-  // state to store time
   const [time, setTime] = useState(0);
 
   useEffect(() => {
     let intervalId;
     if (isRunning) {
-      // setting time from 0 to 1 every 10 milisecond using javascript setInterval method
       intervalId = setInterval(() => setTime(time + 1), 10);
     }
     else{
@@ -16,10 +14,7 @@ function StopWatch({ isRunning }) {
     return () => clearInterval(intervalId);
   }, [isRunning, time]);
 
-  // Minutes calculation
   const minutes = Math.floor((time % 360000) / 6000);
-
-  // Seconds calculation
   const seconds = Math.floor((time % 6000) / 100);
 
   return (

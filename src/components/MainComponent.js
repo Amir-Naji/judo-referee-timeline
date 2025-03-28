@@ -56,7 +56,7 @@ function handleClick(side, action) {
                 <Button color="blue" text="throw" onClick={()=> handleClick("blue", "throw")}/>    
             </div>
         </div>
-        <div>
+        <div className='verticalLine'>
             { page.map((str, index) => (
                     <div key={index} className="mb-2">{str}</div>
                   ))

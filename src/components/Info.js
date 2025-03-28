@@ -8,7 +8,7 @@ function Info({ side, action, startTime }) {
   }
 
   return <React.Fragment>
-    <div className={ side }>{side} {action} at : {elapsedTime}</div>
+    <div className={ side }>{side} <b>{action}</b> at : {elapsedTime}</div>
   </React.Fragment>;
 }
 

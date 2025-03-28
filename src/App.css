@@ -38,7 +38,17 @@ button {
   .margin{
     margin-right: 50px;
   }
+  .marginAttack{
+    margin-right: 240px;
+  }
   div.blue{
     background-color: blue;
+    width: 200px;
     color: white;
   }
+  div.white{
+    background-color: white;
+    width: 200px;
+    color: black;
+  }
+  

@@ -1,12 +1,17 @@
-import React, {useState} from 'react'
+import React, {use, useState} from 'react'
 import Info from './Info'
 import Button from './Button';
 import StopWatch from './Timer';
+import Attack from './Attacks';
 
 function MainComponent() {
 const [page, setPage] = useState([""]);
 const [startTime, setStartTime] = useState(null);
 const [isRunning, setIsRunning] = useState(false);
+const [color, setColor] = useState("");
+const [sideAction, setSideAction] = useState("");
+const [attackCount, setAttackCount] = useState(0);
+
 
 function handleClick(side, action) {
     if (startTime === null)
@@ -15,6 +20,9 @@ function handleClick(side, action) {
       return;
     }
 
+    setColor(side);
+    setSideAction(action);
+    setAttackCount((prev) => prev + 1);
     setPage([...page, <Info side={side} action={action} startTime={startTime}/>]);
   }
 
@@ -35,6 +43,7 @@ function handleClick(side, action) {
         <Button text="Soremade" onClick={() => endClick()}/>
 
         <StopWatch isRunning={isRunning}/>
+        <Attack side={color} action={sideAction} attackCount={attackCount}/>
         <div className='rowC'>
             <div className='margin'>
                 <Button color="white" text="attack" onClick={()=> handleClick("white", "attack")}/>

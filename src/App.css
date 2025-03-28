@@ -32,7 +32,7 @@ button {
     box-shadow: none;
   }
   .rowC{
-    display:flex; 
+    display:flex;
     flex-direction:row;
   }
   .margin{

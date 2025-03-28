@@ -8,7 +8,7 @@ button {
     user-select: none;
     border: 1px solid transparent;
     border: none;
-    padding: 0.370rem 0.70rem;
+    padding: 0.370rem 0.50rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.20rem;
@@ -36,24 +36,24 @@ button {
     flex-direction:row;
   }
   .margin{
-    margin-right: 40px;
+    margin-right: 30px;
   }
   .marginAttack{
-    margin-right: 220px;
+    margin-right: 190px;
   }
   div.blue{
     background-color: blue;
-    width: 200px;
+    width: 170px;
     color: white;
-    margin-left: 250px;
+    margin-left: 200px;
   }
   div.white{
     background-color: white;
-    width: 200px;
+    width: 180px;
     color: black;
   }
   div.verticalLine {
     border-right: thick solid #000000;
-    width: 200px;
+    width: 180px;
   }
   

@@ -45,6 +45,7 @@ button {
     background-color: blue;
     width: 200px;
     color: white;
+    margin-left: 250px;
   }
   div.white{
     background-color: white;

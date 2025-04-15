@@ -88,7 +88,6 @@ function handleClick(side, action) {
                     <div key={index} className="mb-2">{str}</div>
                   ))
             }
-
         </div>
         
         

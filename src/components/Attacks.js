@@ -31,7 +31,7 @@ function Attack({ action, side, attackCount }) {
           } 
         }
       }
-      }, [attackCount]); // Depend on actionCount to re-trigger 
+      }, [attackCount, action, side]); // Depend on actionCount to re-trigger 
     
 
     return (

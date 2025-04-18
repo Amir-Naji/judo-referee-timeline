@@ -36,10 +36,10 @@ function Attack({ action, side, attackCount }) {
 
     return (
         <div className='rowC'>
-            <div className='marginAttack'>
+            <div className='leftCol'>
                 {whiteAttacks}
             </div>
-            <div>
+            <div className="rightCol">
                 {blueAttacks}
             </div>
         </div>

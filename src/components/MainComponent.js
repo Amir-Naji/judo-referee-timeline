@@ -19,10 +19,11 @@ function handleClick(side, action) {
       return;
     }
 
+    
     setColor(side);
     setSideAction(action);
     setAttackCount((prev) => prev + 1);
-    setPage([...page, <Info side={side} action={action} startTime={startTime}/>]);
+    setPage([...page, <Info side={side} action={action} startTime={startTime}/>]);    
   }
 
   function handleDeleteClick() {
@@ -30,8 +31,9 @@ function handleClick(side, action) {
       setPage((prev) => prev.slice(0, -1)); // Remove the last entry
       setSideAction("delete");
       findSide(); // Find the side of the last entry
-      console.log(attackCount);
-      setAttackCount((prev) => prev - 1); // Decrement the attack count
+      
+      if (attackCount > 0)
+        setAttackCount((prev) => prev - 1); // Decrement the attack count
       return;
     }
   }
@@ -70,22 +72,24 @@ function handleClick(side, action) {
         <StopWatch isRunning={isRunning}/>
         <Attack side={color} action={sideAction} attackCount={attackCount}/>
         <div className='rowC'>
-            <div className='margin'>
+            <div className='leftCol'>
                 <Button color="white" text="Attack" onClick={()=> handleClick("white", "attack")}/>
                 <Button color="white" text="Passivity shido" onClick={()=> handleClick("white", "passivity")}/>
                 <Button color="white" text="Shido" onClick={()=> handleClick("white", "shido")}/>
                 <Button color="white" text="Throw" onClick={()=> handleClick("white", "throw")}/>
             </div>
-            <div>
+            <div className='rightCol'>
                 <Button color="blue" text="Attack" onClick={()=> handleClick("blue", "attack")}/>
                 <Button color="blue" text="Passivity Shido" onClick={()=> handleClick("blue", "passivity")}/>
                 <Button color="blue" text="Shido" onClick={()=> handleClick("blue", "shido")}/>                
                 <Button color="blue" text="Throw" onClick={()=> handleClick("blue", "throw")}/>    
             </div>
         </div>
-        <div className='verticalLine'>
+        <div>
             { page.map((str, index) => (
-                    <div key={index} className="mb-2">{str}</div>
+                    <div key={index} className='rowC'>
+                      {str}
+                    </div>
                   ))
             }
         </div>

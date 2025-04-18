@@ -71,7 +71,7 @@ function handleClick(side, action) {
 
         <StopWatch isRunning={isRunning}/>
         <Attack side={color} action={sideAction} attackCount={attackCount}/>
-        <div className='rowC'>
+        <div className='rowC sticky-header'>
             <div className='leftCol'>
                 <Button color="white" text="Attack" onClick={()=> handleClick("white", "attack")}/>
                 <Button color="white" text="Passivity shido" onClick={()=> handleClick("white", "passivity")}/>
